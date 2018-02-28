@@ -204,11 +204,20 @@
     <Compile Include="Migrations\201802280932137_AccountTableSeed.Designer.cs">
       <DependentUpon>201802280932137_AccountTableSeed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281102481_TransactionModelAdded.cs" />
+    <Compile Include="Migrations\201802281102481_TransactionModelAdded.Designer.cs">
+      <DependentUpon>201802281102481_TransactionModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281108180_TransactionModelAdded1.cs" />
+    <Compile Include="Migrations\201802281108180_TransactionModelAdded1.Designer.cs">
+      <DependentUpon>201802281108180_TransactionModelAdded1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -271,10 +280,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Eatm\Login.cshtml" />
+    <Content Include="Views\Eatm\Dashboard.cshtml" />
+    <Content Include="Views\Eatm\BalanceCheck.cshtml" />
+    <Content Include="Views\Eatm\Withdraw.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Eatm\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -295,6 +307,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802280932137_AccountTableSeed.resx">
       <DependentUpon>201802280932137_AccountTableSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281102481_TransactionModelAdded.resx">
+      <DependentUpon>201802281102481_TransactionModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281108180_TransactionModelAdded1.resx">
+      <DependentUpon>201802281108180_TransactionModelAdded1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

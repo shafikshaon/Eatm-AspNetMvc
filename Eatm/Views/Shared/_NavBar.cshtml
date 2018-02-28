@@ -13,7 +13,14 @@
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li>@Html.ActionLink("Log in", "Login", "Account")</li>
+            @if (Session["LoginId"] == null)
+            {
+                <li>@Html.ActionLink("Log in", "Login", "Eatm")</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink("Log Out", "Logout", "Eatm")</li>
+            }
         </ul>
         </div>
     </div>

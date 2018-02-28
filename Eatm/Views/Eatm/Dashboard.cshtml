@@ -1,0 +1,11 @@
+﻿@model Eatm.Models.Account
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dashboard</h2>
+<ul>
+    <li>@Html.ActionLink("Balance Check", "BalanceCheck", new { id = Session["LoginId"] }, null)</li>
+    <li>@Html.ActionLink("Withdraw Balance", "Withdraw", new { id = Session["LoginId"] }, null)</li>
+</ul>

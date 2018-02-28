@@ -1,0 +1,11 @@
+﻿@model Eatm.Models.Account
+@{
+    ViewBag.Title = "BalanceCheck";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@ViewBag.BalanceError
+<h2>Balance Check</h2>
+ Balance: @Model.Balance
+
+<br />
+<li>@Html.ActionLink("Back to Dashboard", "Dashboard", new { id = Session["LoginId"] }, null)</li>

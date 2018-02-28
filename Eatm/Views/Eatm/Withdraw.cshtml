@@ -1,0 +1,41 @@
+﻿@model Eatm.Models.Account
+@{
+    ViewBag.Title = "Withdraw";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Withdraw</h2>
+@ViewBag.WithdrawError
+@ViewBag.LowBalance
+@ViewBag.TransactionLimit
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Withdraw", "Eatm"))
+            {
+                @Html.AntiForgeryToken()
+                <hr />
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Balance, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Balance, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Balance, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Withdraw" class="btn btn-success" />
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+<li>@Html.ActionLink("Back to Dashboard", "Dashboard", new { id = Session["LoginId"] }, null)</li>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
